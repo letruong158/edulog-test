@@ -31,6 +31,20 @@ pipeline {
 
         }
 
+    stage('Run Unit Tests') {
+      steps {
+        container(name: 'node', shell: '/bin/sh') {
+          sh '''#!/bin/sh
+            # Install dependencies
+            npm install
+            
+        
+            npm test
+          '''
+        }
+      }
+    }
+
     stage('Build & Push with Kaniko') {
       steps {
         container(name: 'kaniko', shell: '/busybox/sh') {
