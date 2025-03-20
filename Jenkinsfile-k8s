@@ -5,7 +5,6 @@ pipeline {
       yamlFile 'kaniko-builder.yaml'
     }
   }
-
   environment {
         APP_NAME = "nodejs-template"
         RELEASE = "1.0.0"
