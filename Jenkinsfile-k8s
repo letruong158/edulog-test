@@ -26,7 +26,7 @@ pipeline {
 
     stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'edulog-test', url: 'https://github.com/letruong158/edulog-test.git'
+                git branch: 'main', url: 'https://github.com/letruong158/edulog-test.git'
             }
 
         }
